@@ -14,10 +14,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+   // return view('welcome');
+//});
 
 
-Route::get('/post', [PostController::class, 'show']);
-Route::get('/post/{id}', [PostController::class, 'post']);
+Route::get('/post.show', [PostController::class, 'loop']);
+Route::get('/post.show/{id}', [PostController::class, 'show']);
+

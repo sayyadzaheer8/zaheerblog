@@ -7,14 +7,14 @@ use App\Models\post;
 
 class postController extends Controller
 {
-   public function show(Request $request) {
+   public function loop(Request $request) {
 
        $post = post::all();
-         return view('post',['post' => $post]);
+         return view('/post',['posts' => $post]);
    }
-    public function post(Request $request)
+    public function show(Request $request)
     { $post = post::find($request->id);
-        return view('post',['post' => $post]);
+        return view('post.show',['posts' => $post]);
     }
 
     }
